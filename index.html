@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elegant Watches</title>
+  <link rel="stylesheet" href="style.css"/>
+  <div class="flex justify-end">
+</head>
+<body>
+  <header>
+    <h1>Elegant Watches</h1>
+    <div class="register-link-container">
+      <a href="register.html" class="register-link">Register Here</a>
+    </div>
+  
+    <div class="header-controls">
+      <nav>
+        <button onclick="filterCategory('all')">All</button>
+        <button onclick="filterCategory('gents')">Gents</button>
+        <button onclick="filterCategory('ladies')">Ladies</button>
+      </nav>
+      <input type="text" id="search-input" placeholder="Search watches..." oninput="searchProducts()">
+      <button id="cart-button" onclick="toggleCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+    </div>
+  </header>
+
+  <main id="product-list"></main>
+
+  <div id="cart" class="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="total">Total: $0</p>
+    <button onclick="clearCart()">Clear Cart</button>
+  </div>
+
+  <video autoplay muted loop id="bg-video">
+    <source src="0505.mp4" type="video/mp4">
+  </video>
+  
+  <script src="script.js"></script>
+</body>
+</html>
